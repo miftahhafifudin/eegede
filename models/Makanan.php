@@ -14,7 +14,9 @@
 	    {
 	        return \Yii::$app->db;  
 	    }
-		
+		public static function tableName(){
+			return 'makanan';
+		}
 		public function rules(){
 			return[
 				[['nama','id_kategori','keterangan','stok','harga','img'],'required'],

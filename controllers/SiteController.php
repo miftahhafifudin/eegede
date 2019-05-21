@@ -78,21 +78,22 @@ class SiteController extends Controller
         ],
     ]);
 
-
+ $foods = Makanan::find()
+            
+                ->orderBy($sort->orders)
+                ->all();
        
     $searchModel = new MakananSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'foods'=>$foods,
             'sort'=>$sort,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
 
-        $foods = Makanan::find()
-            
-                ->orderBy($sort->orders)
-                ->all();
+       
 
     }
 
