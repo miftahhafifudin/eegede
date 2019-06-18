@@ -15,15 +15,9 @@ $this->title = 'TABLE FOOD';
 <?php endif; ?>
     <div class="header" align="center">
         <h1><font color="red">Yii2 FOOOOOOOOD</font></h1>
-    </div>
+    </div>  
 
-     <div class="row">
-        <span style="margin-top:60px"><?= Html::a('Tambah Makanan',['/site/create'],['class' => 'btn btn-primary']) ?></span>
-        <span style="margin-top:60px"><?= Html::a('KATEGORI',['/kategori/index'],['class' => 'btn btn-primary']) ?></span>
-    </div>
- 
-
-    <div class="body-content">
+  <div class="body-content">
         <div class="row">
         <table class="table table-hover" border ="1">
   <thead>
@@ -36,7 +30,6 @@ $this->title = 'TABLE FOOD';
       <th scope="col">KETERANGAN</th>
       <th scope="col">STOK</th>
       <th scope="col">HARGA</th>
-      <th scope="col">ACTION</th>
     </tr>
   </thead>
   <tbody>
@@ -52,12 +45,6 @@ $this->title = 'TABLE FOOD';
       <td><?= $food->keterangan;?></td>
       <td><?= $food->stok;?></td>
       <td><?= $food->harga;?></td>
- 
-      <td>
-        <span><?=Html::a('view',['view','id'=>$food->id_food],['class'=>'label label-primary'])?></span>
-        <span><?=Html::a('update',['update','id'=>$food->id_food],['class'=>'label label-default'])?></span>
-        <span><?=Html::a('delete',['delete','id'=>$food->id_food],['class'=>'label label-danger'])?></span>
-      </td>
     </tr>
 <?php endforeach ; ?>
     <?php else: ?>
@@ -69,4 +56,3 @@ $this->title = 'TABLE FOOD';
 </table>
     </div>
 </div>
-

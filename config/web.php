@@ -20,8 +20,12 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'identityClass' => 'app\models\BackedUser',
+            'enableAutoLogin' => false,
+        ],
+        'authManager'=>[
+            'class' => 'yii\rbac\PhpManager',
+            'defaultRoles' => ['admin', 'author'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

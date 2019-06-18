@@ -1,0 +1,24 @@
+<?php
+	namespace app\controllers;
+
+	use yii;
+	use yii\web\Controller;
+	use app\models\LoginForm;
+	use app\models\BackedAdmin;
+
+	class AdminController extends Controller{
+
+		public function actionRegister(){
+			$admin = new BackedAdmin();
+			if($admin->load(Yii::$app->request->post())){
+				if($admin->save()){
+					Yii::$app->getSession()->setFlash('message','AKUN ADMIN SUDAH DI BUAT');
+					return $this->redirect(['site/login']);
+				}
+				else{
+					Yii::$app->getSession()->setFlash('message','AKUN GAGAL DI BUAT');
+				}
+			}
+			return $this->render('registerAdmin',['admin'=>$admin]);
+		}
+	}

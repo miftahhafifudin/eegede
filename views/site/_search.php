@@ -17,13 +17,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_food') ?>
 
-    <?= $form->field($model, 'id_kategori') ?>
+    <?php// echo $form->field($model, 'id_kategori') ?>
 
-    <?= $form->field($model, 'nama') ?>
+    <?php// echo $form->field($model, 'nama') ?>
 
-    <?= $form->field($model, 'keterangan') ?>
+    <?php// echo $form->field($model, 'keterangan') ?>
 
-    <?= $form->field($model, 'stok') ?>
+    <?php// echo $form->field($model, 'stok') ?>
 
     <?php // echo $form->field($model, 'harga') ?>
 

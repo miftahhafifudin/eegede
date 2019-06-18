@@ -39,6 +39,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'HOME', 'url' => ['/site/index']],
+            ['label'=>'REGISTER','url'=> ['user/register']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'MASHOK', 'url' => ['/site/login']]
             ) : (
